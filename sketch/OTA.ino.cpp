@@ -9,24 +9,23 @@ const char* password = "Cullisemental";
 const char* firmware_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/OTA.ino.bin";
 const char* version_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/version.txt";
 
-const char* current_version = "0.0.0"; 
+const char* current_version = "0.0.1"; 
 
 
 unsigned long previousMillis = 0;
-const long interval = 60000;
-unsigned long currentMillis = millis();
+const long interval = 10000;
 
-#line 17 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 16 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void setup();
-#line 29 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 28 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void loop();
-#line 49 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 50 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void reconnectWiFi();
-#line 67 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 68 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void check_for_update();
-#line 93 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 94 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void download_firmware();
-#line 17 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 16 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void setup() {
   Serial.begin(921600);
   WiFi.begin(ssid, password);
@@ -40,22 +39,24 @@ void setup() {
 }
 
 void loop() {
+unsigned long currentMillis = millis();
 
   if (WiFi.status() != WL_CONNECTED) {
     Serial.println("Conexión WiFi perdida. Intentando reconectar...");
     reconnectWiFi();
-  }/*else{
+  }else{
     Serial.println("Conexion WIFI estable ;)"); 
-  }*/
+  }
   
   
   if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis;
+    Serial.println("Revisando si funciona ..");
     check_for_update();
   }
 
 
-  Serial.println("Version Alpha 0.0v");
+  Serial.println("Version Alpha 0.0.1");
   delay(5000);
 }
 
@@ -72,7 +73,7 @@ void reconnectWiFi() {
   if (WiFi.status() == WL_CONNECTED) {
     Serial.println("Re-conectado a WiFi!");
   } else {
-    Serial.println("Falló la reconexión a WiFi.");
+    Serial.println("Fallo la reconexion a WiFi.");
   }
 }
 
@@ -88,24 +89,24 @@ void check_for_update() {
       new_version.trim();  // Eliminar espacios o saltos de línea adicionales
 
       if (new_version != current_version) {
-        Serial.println("Nueva versión disponible: " + new_version);
+        Serial.println("Nueva version disponible: " + new_version);
         download_firmware();
       } else {
-        Serial.println("El firmware está actualizado. No se requiere actualización.");
+        Serial.println("El firmware esto actualizado. No se requiere actualizacion.");
       }
     } else {
-      Serial.println("No se pudo verificar la versión. Código HTTP: " + String(httpCode));
+      Serial.println("No se pudo verificar la version. Codigo HTTP: " + String(httpCode));
     }
     
     http.end();
   } else {
-    Serial.println("No se pudo verificar la versión debido a la pérdida de conexión WiFi.");
+    Serial.println("No se pudo verificar la version debido a la pérdida de conexion WiFi.");
   }
 }
 
 void download_firmware() {
   if (WiFi.status() == WL_CONNECTED) {
-    Serial.println("Descargando nueva versión de firmware...");
+    Serial.println("Descargando nueva version de firmware...");
     HTTPClient http;
     http.begin(firmware_url);
 
@@ -115,34 +116,34 @@ void download_firmware() {
       bool canBegin = Update.begin(contentLength, U_FLASH);
 
       if (canBegin) {
-        Serial.println("Comenzando la actualización OTA...");
+        Serial.println("Comenzando la actualizacion OTA...");
         size_t written = Update.writeStream(http.getStream());
 
         if (written == contentLength) {
-          Serial.println("El firmware descargado está escrito completamente en la memoria flash");
+          Serial.println("El firmware descargado esto escrito completamente en la memoria flash");
         } else {
           Serial.println("El firmware no se ha descargado correctamente en la memoria flash");
         }
 
         if (Update.end()) {
-          Serial.println("Actualización completada.");
+          Serial.println("Actualizacion completada.");
           if (Update.isFinished()) {
             Serial.println("Reiniciando...");
             ESP.restart();  
           } else {
-            Serial.println("La actualización no se ha completado.");
+            Serial.println("La actualizacion no se ha completado.");
           }
         } else {
-          Serial.println("Error durante la actualización #: " + String(Update.getError()));
+          Serial.println("Error durante la actualizacion #: " + String(Update.getError()));
         }
       } else {
-        Serial.println("No se puede iniciar la actualización OTA.");
+        Serial.println("No se puede iniciar la actualizacion OTA.");
       }
     } else {
-      Serial.println("No se puede conectar al servidor de actualización. Código HTTP: " + String(httpCode));
+      Serial.println("No se puede conectar al servidor de actualizacion. Codigo HTTP: " + String(httpCode));
     }
     http.end();
   } else {
-    Serial.println("Conexión WiFi perdida.");
+    Serial.println("Conexion WiFi perdida.");
   }
 }
