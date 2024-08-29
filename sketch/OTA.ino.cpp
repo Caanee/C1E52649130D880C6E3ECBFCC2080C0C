@@ -6,7 +6,7 @@
 
 const char* ssid = "Cuyi el macho";
 const char* password = "Cullisemental";
-const char* firmware_url = "archivo de la github .bin";
+const char* firmware_url = "https://github.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/blob/main/OTA.ino.bin";
 
 unsigned long previousMillis = 0;
 const long interval = 60000;
