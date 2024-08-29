@@ -7,20 +7,26 @@
 const char* ssid = "Cuyi el macho";
 const char* password = "Cullisemental";
 const char* firmware_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/OTA.ino.bin";
+const char* version_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/version.txt";
+
+const char* current_version = "0.0.0"; 
 
 
 unsigned long previousMillis = 0;
 const long interval = 60000;
+unsigned long currentMillis = millis();
 
-#line 13 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 17 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void setup();
-#line 25 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 29 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void loop();
-#line 38 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 49 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void reconnectWiFi();
-#line 55 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 67 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+void check_for_update();
+#line 93 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void download_firmware();
-#line 13 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 17 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void setup() {
   Serial.begin(921600);
   WiFi.begin(ssid, password);
@@ -41,7 +47,14 @@ void loop() {
   }/*else{
     Serial.println("Conexion WIFI estable ;)"); 
   }*/
-  download_firmware();
+  
+  
+  if (currentMillis - previousMillis >= interval) {
+    previousMillis = currentMillis;
+    check_for_update();
+  }
+
+
   Serial.println("Version Alpha 0.0v");
   delay(5000);
 }
@@ -63,55 +76,73 @@ void reconnectWiFi() {
   }
 }
 
-void download_firmware(){
-    unsigned long currentMillis = millis();
-  
-  // Verifica si ha pasado el intervalo para buscar una actualización
-  if (currentMillis - previousMillis >= interval) {
-    previousMillis = currentMillis;
 
-    if (WiFi.status() == WL_CONNECTED) {
-      Serial.println("Buscando actualizaciones...");
-      HTTPClient http;
-      http.begin(firmware_url);
+void check_for_update() {
+  if (WiFi.status() == WL_CONNECTED) {
+    HTTPClient http;
+    http.begin(version_url);
+    
+    int httpCode = http.GET();
+    if (httpCode == HTTP_CODE_OK) {
+      String new_version = http.getString();
+      new_version.trim();  // Eliminar espacios o saltos de línea adicionales
 
-      int httpCode = http.GET();
-      if (httpCode == HTTP_CODE_OK) {
-        int contentLength = http.getSize();
-        bool canBegin = Update.begin(contentLength, U_FLASH);
-
-        if (canBegin) {
-                      Serial.println("Comenzando la actualización OTA...");
-                      size_t written = Update.writeStream(http.getStream());
-
-                      if (written == contentLength) {
-                        //Serial.println("Escrito: " + String(written) + " bytes exitosamente.");
-                        Serial.println("El firmware descargado esta escrito completo en la memoria flash");
-                      } else {
-                        //Serial.println("Escrito solo: " + String(written) + "/" + String(contentLength));
-                        Serial.println("El firmware no se ha descargado correctamente en la memoria flash");
-                      }
-
-                      if (Update.end()) {
-                        Serial.println("Actualización completada.");
-                        if (Update.isFinished()) {
-                          Serial.println("Reiniciando...");
-                          ESP.restart();  
-                        } else {
-                          Serial.println("La actualización no se ha completado.");
-                        }
-                      } else {
-                        Serial.println("Error durante la actualización #: " + String(Update.getError()));
-                      }
-                      } else {
-                        Serial.println("No se puede iniciar la actualización OTA.");
-                      }
+      if (new_version != current_version) {
+        Serial.println("Nueva versión disponible: " + new_version);
+        download_firmware();
       } else {
-        Serial.println("No se puede conectar al servidor de actualización. Código HTTP: " + String(httpCode));
+        Serial.println("El firmware está actualizado. No se requiere actualización.");
       }
-      http.end();
     } else {
-      Serial.println("Conexión WiFi perdida.");
+      Serial.println("No se pudo verificar la versión. Código HTTP: " + String(httpCode));
     }
-  } 
+    
+    http.end();
+  } else {
+    Serial.println("No se pudo verificar la versión debido a la pérdida de conexión WiFi.");
+  }
+}
+
+void download_firmware() {
+  if (WiFi.status() == WL_CONNECTED) {
+    Serial.println("Descargando nueva versión de firmware...");
+    HTTPClient http;
+    http.begin(firmware_url);
+
+    int httpCode = http.GET();
+    if (httpCode == HTTP_CODE_OK) {
+      int contentLength = http.getSize();
+      bool canBegin = Update.begin(contentLength, U_FLASH);
+
+      if (canBegin) {
+        Serial.println("Comenzando la actualización OTA...");
+        size_t written = Update.writeStream(http.getStream());
+
+        if (written == contentLength) {
+          Serial.println("El firmware descargado está escrito completamente en la memoria flash");
+        } else {
+          Serial.println("El firmware no se ha descargado correctamente en la memoria flash");
+        }
+
+        if (Update.end()) {
+          Serial.println("Actualización completada.");
+          if (Update.isFinished()) {
+            Serial.println("Reiniciando...");
+            ESP.restart();  
+          } else {
+            Serial.println("La actualización no se ha completado.");
+          }
+        } else {
+          Serial.println("Error durante la actualización #: " + String(Update.getError()));
+        }
+      } else {
+        Serial.println("No se puede iniciar la actualización OTA.");
+      }
+    } else {
+      Serial.println("No se puede conectar al servidor de actualización. Código HTTP: " + String(httpCode));
+    }
+    http.end();
+  } else {
+    Serial.println("Conexión WiFi perdida.");
+  }
 }
