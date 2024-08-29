@@ -4,28 +4,30 @@
 #include <HTTPClient.h>
 #include <Update.h>
 
+
+#define VERSION "0.0.2"
 const char* ssid = "Cuyi el macho";
 const char* password = "Cullisemental";
 const char* firmware_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/OTA.ino.bin";
 const char* version_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/version.txt";
 
-const char* current_version = "0.0.1"; 
+const char* current_version = VERSION; 
 
 
 unsigned long previousMillis = 0;
 const long interval = 10000;
 
-#line 16 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 18 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void setup();
-#line 28 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 30 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void loop();
-#line 50 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 48 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void reconnectWiFi();
-#line 68 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 66 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void check_for_update();
-#line 94 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 92 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void download_firmware();
-#line 16 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 18 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void setup() {
   Serial.begin(921600);
   WiFi.begin(ssid, password);
@@ -44,20 +46,16 @@ unsigned long currentMillis = millis();
   if (WiFi.status() != WL_CONNECTED) {
     Serial.println("Conexión WiFi perdida. Intentando reconectar...");
     reconnectWiFi();
-  }else{
-    Serial.println("Conexion WIFI estable ;)"); 
-  }
-  
+  }  
   
   if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis;
-    Serial.println("Revisando si funciona ..");
     check_for_update();
   }
 
 
-  Serial.println("Version Alpha 0.0.1");
-  delay(5000);
+  Serial.print("Version Alpha "); Serial.println(VERSION);
+  
 }
 
 void reconnectWiFi() {
@@ -92,7 +90,7 @@ void check_for_update() {
         Serial.println("Nueva version disponible: " + new_version);
         download_firmware();
       } else {
-        Serial.println("El firmware esto actualizado. No se requiere actualizacion.");
+        Serial.println("El firmware esta actualizado. No se requiere actualizacion.");
       }
     } else {
       Serial.println("No se pudo verificar la version. Codigo HTTP: " + String(httpCode));
