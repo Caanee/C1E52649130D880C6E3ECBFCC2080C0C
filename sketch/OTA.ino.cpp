@@ -6,20 +6,21 @@
 
 const char* ssid = "Cuyi el macho";
 const char* password = "Cullisemental";
-const char* firmware_url = "https://github.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/blob/main/OTA.ino.bin";
+const char* firmware_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/OTA.ino.bin";
+
 
 unsigned long previousMillis = 0;
 const long interval = 60000;
 
-#line 12 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 13 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void setup();
-#line 24 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 25 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void loop();
-#line 37 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 38 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void reconnectWiFi();
-#line 54 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 55 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void download_firmware();
-#line 12 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 13 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void setup() {
   Serial.begin(921600);
   WiFi.begin(ssid, password);
@@ -37,11 +38,11 @@ void loop() {
   if (WiFi.status() != WL_CONNECTED) {
     Serial.println("Conexión WiFi perdida. Intentando reconectar...");
     reconnectWiFi();
-  }else{
+  }/*else{
     Serial.println("Conexion WIFI estable ;)"); 
-  }
+  }*/
   download_firmware();
-  Serial.println("Version Alpha 0.1v");
+  Serial.println("Version Alpha 0.0v");
   delay(5000);
 }
 
