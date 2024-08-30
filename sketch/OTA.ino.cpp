@@ -5,7 +5,7 @@
 #include <Update.h>
 
 
-#define VERSION "0.0.1"
+#define VERSION "0.0.0"
 const char* ssid = "Cuyi el macho";
 const char* password = "Cullisemental";
 const char* firmware_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/OTA.ino.bin";
@@ -21,11 +21,11 @@ const long interval = 10000;
 void setup();
 #line 30 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void loop();
-#line 76 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 77 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void reconnectWiFi();
-#line 94 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 95 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void check_for_update();
-#line 120 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
+#line 121 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void download_firmware();
 #line 18 "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA\\OTA.ino"
 void setup() {
@@ -82,6 +82,7 @@ unsigned long currentMillis = millis();
   Serial.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢎⠉⠛⠻⠿⠿⠿⠿⠿⣇⠠⠸⣇⣀⣤⣴⣾⡭⠶⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⠇⠀⠀⠀⠘");
   Serial.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⣤⡀⠀⠀⠀⠀⠀⠈⣳⠀⣿⠛⠻⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡯⠀⠀⠀⠀⠀");
 */
+  Serial.println(" ('') ");
 
   delay(5000);
 }
