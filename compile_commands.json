@@ -125,55 +125,11 @@
    "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\STA.cpp",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\AP.cpp",
    "-o",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\WiFi\\STA.cpp.o"
+   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\WiFi\\AP.cpp.o"
   ],
-  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\STA.cpp"
- },
- {
-  "directory": "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
-  "arguments": [
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp-x32\\2302/bin/xtensa-esp32-elf-g++",
-   "-MMD",
-   "-c",
-   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/cpp_flags",
-   "-w",
-   "-Os",
-   "-DF_CPU=240000000L",
-   "-DARDUINO=10607",
-   "-DARDUINO_ESP32_WROOM_DA",
-   "-DARDUINO_ARCH_ESP32",
-   "-DARDUINO_BOARD=\"ESP32_WROOM_DA\"",
-   "-DARDUINO_VARIANT=\"esp32da\"",
-   "-DARDUINO_PARTITION_app3M_fat9M_16MB",
-   "-DARDUINO_HOST_OS=\"windows\"",
-   "-DARDUINO_FQBN=\"esp32:esp32:esp32da:UploadSpeed=921600,CPUFreq=240,FlashFreq=80,FlashMode=qio,FlashSize=16M,PartitionScheme=app3M_fat9M_16MB,DebugLevel=none,LoopCore=1,EventsCore=1,EraseFlash=none\"",
-   "-DESP32",
-   "-DCORE_DEBUG_LEVEL=0",
-   "-DARDUINO_RUNNING_CORE=1",
-   "-DARDUINO_EVENT_RUNNING_CORE=1",
-   "-DARDUINO_USB_CDC_ON_BOOT=0",
-   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/defines",
-   "-IC:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
-   "-iprefix",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/include/",
-   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/includes",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/qio_qspi/include",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\cores\\esp32",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\variants\\esp32da",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\HTTPClient\\src",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\NetworkClientSecure\\src",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
-   "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
-   "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\WiFiGeneric.cpp",
-   "-o",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\WiFi\\WiFiGeneric.cpp.o"
-  ],
-  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\WiFiGeneric.cpp"
+  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\AP.cpp"
  },
  {
   "directory": "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
@@ -257,11 +213,11 @@
    "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\WiFiMulti.cpp",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\WiFiGeneric.cpp",
    "-o",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\WiFi\\WiFiMulti.cpp.o"
+   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\WiFi\\WiFiGeneric.cpp.o"
   ],
-  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\WiFiMulti.cpp"
+  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\WiFiGeneric.cpp"
  },
  {
   "directory": "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
@@ -301,11 +257,11 @@
    "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\AP.cpp",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\WiFiMulti.cpp",
    "-o",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\WiFi\\AP.cpp.o"
+   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\WiFi\\WiFiMulti.cpp.o"
   ],
-  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\AP.cpp"
+  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\WiFiMulti.cpp"
  },
  {
   "directory": "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
@@ -389,6 +345,50 @@
    "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\STA.cpp",
+   "-o",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\WiFi\\STA.cpp.o"
+  ],
+  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\STA.cpp"
+ },
+ {
+  "directory": "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
+  "arguments": [
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp-x32\\2302/bin/xtensa-esp32-elf-g++",
+   "-MMD",
+   "-c",
+   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/cpp_flags",
+   "-w",
+   "-Os",
+   "-DF_CPU=240000000L",
+   "-DARDUINO=10607",
+   "-DARDUINO_ESP32_WROOM_DA",
+   "-DARDUINO_ARCH_ESP32",
+   "-DARDUINO_BOARD=\"ESP32_WROOM_DA\"",
+   "-DARDUINO_VARIANT=\"esp32da\"",
+   "-DARDUINO_PARTITION_app3M_fat9M_16MB",
+   "-DARDUINO_HOST_OS=\"windows\"",
+   "-DARDUINO_FQBN=\"esp32:esp32:esp32da:UploadSpeed=921600,CPUFreq=240,FlashFreq=80,FlashMode=qio,FlashSize=16M,PartitionScheme=app3M_fat9M_16MB,DebugLevel=none,LoopCore=1,EventsCore=1,EraseFlash=none\"",
+   "-DESP32",
+   "-DCORE_DEBUG_LEVEL=0",
+   "-DARDUINO_RUNNING_CORE=1",
+   "-DARDUINO_EVENT_RUNNING_CORE=1",
+   "-DARDUINO_USB_CDC_ON_BOOT=0",
+   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/defines",
+   "-IC:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
+   "-iprefix",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/include/",
+   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/includes",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/qio_qspi/include",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\cores\\esp32",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\variants\\esp32da",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\HTTPClient\\src",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\NetworkClientSecure\\src",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
+   "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
+   "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
    "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src\\WiFiScan.cpp",
    "-o",
    "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\WiFi\\WiFiScan.cpp.o"
@@ -433,55 +433,11 @@
    "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkServer.cpp",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkUdp.cpp",
    "-o",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\Network\\NetworkServer.cpp.o"
+   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\Network\\NetworkUdp.cpp.o"
   ],
-  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkServer.cpp"
- },
- {
-  "directory": "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
-  "arguments": [
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp-x32\\2302/bin/xtensa-esp32-elf-g++",
-   "-MMD",
-   "-c",
-   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/cpp_flags",
-   "-w",
-   "-Os",
-   "-DF_CPU=240000000L",
-   "-DARDUINO=10607",
-   "-DARDUINO_ESP32_WROOM_DA",
-   "-DARDUINO_ARCH_ESP32",
-   "-DARDUINO_BOARD=\"ESP32_WROOM_DA\"",
-   "-DARDUINO_VARIANT=\"esp32da\"",
-   "-DARDUINO_PARTITION_app3M_fat9M_16MB",
-   "-DARDUINO_HOST_OS=\"windows\"",
-   "-DARDUINO_FQBN=\"esp32:esp32:esp32da:UploadSpeed=921600,CPUFreq=240,FlashFreq=80,FlashMode=qio,FlashSize=16M,PartitionScheme=app3M_fat9M_16MB,DebugLevel=none,LoopCore=1,EventsCore=1,EraseFlash=none\"",
-   "-DESP32",
-   "-DCORE_DEBUG_LEVEL=0",
-   "-DARDUINO_RUNNING_CORE=1",
-   "-DARDUINO_EVENT_RUNNING_CORE=1",
-   "-DARDUINO_USB_CDC_ON_BOOT=0",
-   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/defines",
-   "-IC:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
-   "-iprefix",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/include/",
-   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/includes",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/qio_qspi/include",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\cores\\esp32",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\variants\\esp32da",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\HTTPClient\\src",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\NetworkClientSecure\\src",
-   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
-   "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
-   "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkEvents.cpp",
-   "-o",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\Network\\NetworkEvents.cpp.o"
-  ],
-  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkEvents.cpp"
+  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkUdp.cpp"
  },
  {
   "directory": "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
@@ -609,11 +565,11 @@
    "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkManager.cpp",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkServer.cpp",
    "-o",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\Network\\NetworkManager.cpp.o"
+   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\Network\\NetworkServer.cpp.o"
   ],
-  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkManager.cpp"
+  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkServer.cpp"
  },
  {
   "directory": "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
@@ -653,11 +609,55 @@
    "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
    "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkUdp.cpp",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkEvents.cpp",
    "-o",
-   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\Network\\NetworkUdp.cpp.o"
+   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\Network\\NetworkEvents.cpp.o"
   ],
-  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkUdp.cpp"
+  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkEvents.cpp"
+ },
+ {
+  "directory": "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
+  "arguments": [
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp-x32\\2302/bin/xtensa-esp32-elf-g++",
+   "-MMD",
+   "-c",
+   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/cpp_flags",
+   "-w",
+   "-Os",
+   "-DF_CPU=240000000L",
+   "-DARDUINO=10607",
+   "-DARDUINO_ESP32_WROOM_DA",
+   "-DARDUINO_ARCH_ESP32",
+   "-DARDUINO_BOARD=\"ESP32_WROOM_DA\"",
+   "-DARDUINO_VARIANT=\"esp32da\"",
+   "-DARDUINO_PARTITION_app3M_fat9M_16MB",
+   "-DARDUINO_HOST_OS=\"windows\"",
+   "-DARDUINO_FQBN=\"esp32:esp32:esp32da:UploadSpeed=921600,CPUFreq=240,FlashFreq=80,FlashMode=qio,FlashSize=16M,PartitionScheme=app3M_fat9M_16MB,DebugLevel=none,LoopCore=1,EventsCore=1,EraseFlash=none\"",
+   "-DESP32",
+   "-DCORE_DEBUG_LEVEL=0",
+   "-DARDUINO_RUNNING_CORE=1",
+   "-DARDUINO_EVENT_RUNNING_CORE=1",
+   "-DARDUINO_USB_CDC_ON_BOOT=0",
+   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/defines",
+   "-IC:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
+   "-iprefix",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/include/",
+   "@C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/flags/includes",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32-arduino-libs\\idf-release_v5.1-dc859c1e67\\esp32/qio_qspi/include",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\cores\\esp32",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\variants\\esp32da",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\WiFi\\src",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\HTTPClient\\src",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\NetworkClientSecure\\src",
+   "-IC:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Update\\src",
+   "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/build_opt.h",
+   "@C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C/file_opts",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkManager.cpp",
+   "-o",
+   "C:\\Users\\Sebastian\\AppData\\Local\\Temp\\arduino\\sketches\\C1E52649130D880C6E3ECBFCC2080C0C\\libraries\\Network\\NetworkManager.cpp.o"
+  ],
+  "file": "C:\\Users\\Sebastian\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.0.3\\libraries\\Network\\src\\NetworkManager.cpp"
  },
  {
   "directory": "C:\\Users\\Sebastian\\OneDrive - UNIVERSIDAD ANDRES BELLO\\Proyecto\\electronica\\ESP32\\OTA",
