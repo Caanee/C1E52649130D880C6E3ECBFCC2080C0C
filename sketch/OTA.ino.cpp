@@ -5,10 +5,10 @@
 #include <Update.h>
 
 
-#define VERSION "0.0.0"
+#define VERSION "0.0.1"
 const char* ssid = "Cuyi el macho";
 const char* password = "Cullisemental";
-const char* firmware_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/OTA.ino.bin";
+const char* firmware_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/OTA.ino.merged.bin";
 const char* version_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/version.txt";
 
 const char* current_version = VERSION; 
