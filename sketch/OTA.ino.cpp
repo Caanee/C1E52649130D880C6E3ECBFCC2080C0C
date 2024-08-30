@@ -5,7 +5,7 @@
 #include <Update.h>
 
 
-#define VERSION "0.0.3"
+#define VERSION "0.0.0"
 const char* ssid = "Cuyi el macho";
 const char* password = "Cullisemental";
 const char* firmware_url = "https://raw.githubusercontent.com/Caanee/C1E52649130D880C6E3ECBFCC2080C0C/main/OTA.ino.merged.bin";
@@ -55,7 +55,7 @@ unsigned long currentMillis = millis();
 
 
   Serial.print("Version Alpha "); Serial.println(VERSION);
-  Serial.println(""); Serial.println("");/*
+  /*
   Serial.println("⠀⠀⠀⠀⣀⢀⣠⣤⠴⠶⠚⠛⠉⣹⡇⠀⢸⠀⠀⠀⠀⠀⢰⣄⠀⠀⠀⠀⠈⢦⢰⠀⠀⠀⠀⠀⠈⢳⡀⠈⢧⠀⠀⠀⠀⢸⠀⠀⠀⠀");
   Serial.println("⠀⠀⠉⠀⠀⠀⡏⠀⢰⠃⠀⠀⠀⣿⡇⠀⢸⡀⠀⠀⠀⠀⢸⣸⡆⠀⠀⠀⠰⣌⣧⡆⠀⢷⡀⠀⠀⣄⢳⠀⠀⢣⠀⠀⠀⢸⠀⠀⠀⠀");
   Serial.println("⠀⠀⠀⠀⠀⠀⡇⠀⠘⠀⠀⠀⢀⣿⣇⠀⠸⡇⣆⠀⠀⠀⠀⣿⣿⡀⠀⠀⠀⢹⣾⡇⠀⢸⢣⠀⠀⠘⣿⣇⠀⠈⢧⠀⠀⠘⠀⢠⠀⠀");
